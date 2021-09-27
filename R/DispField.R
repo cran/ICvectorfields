@@ -61,16 +61,15 @@
 #' (Mat1 <- matrix(rep(c(1:5, 0, 0, 0, 0), 9), nrow = 9, byrow = TRUE))
 #' (Mat2 <- matrix(rep(c(0, 1:5, 0, 0, 0), 9), nrow = 9, byrow = TRUE))
 #'
-#' # Note that rasterizing a matrix causes it to be rotated 90 degrees.
-#' # Therefore, any shift in the x direction is in fact now a shift in the y direction
+#' # rasterizing
 #' rast1 <- terra::rast(Mat1)
 #' terra::plot(rast1)
 #' rast2 <- terra::rast(Mat2)
 #' terra::plot(rast2)
 #'
 #' (VFdf1 <- DispField(rast1, rast2, factv1 = 9, facth1 = 9))
-#' # The second raster is shifted down by 0.1111111 units relative to the first raster
-#' # dispy = -0.1111111
+#' # The second raster is shifted right by 0.1111111 units relative to the first raster
+#' # dispx = 0.1111111
 DispField <- function(inputrast1, inputrast2, factv1, facth1, restricted = FALSE) {
   if (factv1 / 2 == round(factv1 / 2)) {
     stop("factv1 and facth1 must be odd integers")
@@ -134,6 +133,13 @@ DispField <- function(inputrast1, inputrast2, factv1, facth1, restricted = FALSE
       Outdf$centy[i] <- terra::yFromRow(inputrast1, row = Outdf$rowcent[i])
       Outdf$dispx[i] <- 0
       Outdf$dispy[i] <- 0
+    }
+
+    # ensuring the algorithm does not predict movement across the entire
+    # region of interest when the cross-covariance is less than or equal to zero.
+    if (restricted == TRUE & abs(Outdf$dispx[i]) >=  factv1*dx & abs(Outdf$dispy[i]) >= facth1*dy) {
+      Outdf$dispx[i] <- NA
+      Outdf$dispx[i] <- NA
     }
   }
   return(Outdf)

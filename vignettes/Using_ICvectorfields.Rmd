@@ -190,10 +190,10 @@ sqrt((176^2) + (176^2))
 # (pythagorean theorem)
 ```
 
-The hypotenuse of a right angle triangle with velocities in the horizontal and vertical direction of 176 km per year produces a velocity vector in the north-eastern direction with speed equal to 249 km per year--an estimate that is much closer to previous published estimates of larch budmoth population movement speed [@Bjornstad2002, @Johnson2004].
+The hypotenuse of a right angle triangle with velocities in the horizontal and vertical direction of 176 km per year produces a velocity vector in the north-eastern direction with speed equal to 249 km per year--an estimate that is much closer to previous published estimates of larch budmoth population movement speed [@Bjornstad2002; @Johnson2004].
 
 # Expected Uses of Software
 
-The *ICvectorfields* software will most likely be useful for exploratory and confirmatory research applications and for visualization of data for hypothesis generation. The caveats that researchers should consider when using *ICvectorfields* or related approaches are embodied in the often quoted statement that correlation is not causation. The functions in the *ICvectorfields* package infer displacement based on cross-covariance, which is essentially a form of correlation. Moreover, by changing the arguments of the functions in this package, it is very possible to obtain different results as demonstrated in this vignette. For these reasons, users must be vigilant when using these approaches or any others that rely on cross-correlation or cross-covariance.
+The *ICvectorfields* software will most likely be useful for exploratory and confirmatory research applications and for visualization of data for hypothesis generation. The caveats that researchers should consider when using *ICvectorfields* or related approaches are embodied in the often quoted statement that correlation is not causation. The functions in the *ICvectorfields* package infer displacement based on cross-covariance, which is a form of correlation. Moreover, by changing the arguments of the functions in this package, it is very possible to obtain different results as demonstrated in this vignette. For these reasons, users must be vigilant when using these approaches or any others that rely on cross-correlation or cross-covariance.
 
 # References
