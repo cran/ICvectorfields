@@ -1,6 +1,6 @@
-98ce7d130561e4077715bf181bd3f939 *DESCRIPTION
+ecc33c56be4977ff787704391538a19a *DESCRIPTION
 c6b421fb21244088cefe40c3ee61d8a1 *NAMESPACE
-c17736e05b51ffce45a919e4144f98e8 *NEWS.md
+71c0c1149ff6cdcf6c8080fc9ebc50db *NEWS.md
 55696552c3a390f1edfcfeea26c59177 *R/DispField.R
 932b48463cc3789e6615a3dbd9e43a31 *R/DispFieldST.R
 56c03ed67f13f81c9aa59e3ad63e9b14 *R/DispFieldSTall.R
@@ -51,7 +51,7 @@ f73cd5c2e9cf5e401311d5baee17d9f1 *man/SimData.Rd
 45c6116ae16783d8c657c326f967d4cc *man/Xcov2D.Rd
 da482c7e7572bdfcf61353224de49e0a *man/figures/README-unnamed-chunk-4-1.png
 da482c7e7572bdfcf61353224de49e0a *man/figures/README-unnamed-chunk-5-1.png
-88b26d0c9349c0c0d7863c85a68f2cc1 *src/MoransI.cpp
+fa6633b7dd56c7a849ee2a8660281f4b *src/MoransI.cpp
 2cf692bdbe6541c9ae2b6d0baea4ba6e *src/RcppExports.cpp
 e45f722ee354cb7bb0751c63542c30da *tests/testthat.R
 8228f55da89b761dab8c7e477895383d *tests/testthat/test-DispField.R
